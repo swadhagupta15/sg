@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Dr. Swadha Gupta</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .research-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .research-card {
+    padding: 2.2rem;
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 2px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .research-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 2px;
+    background: linear-gradient(90deg, var(--accent2), var(--accent));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .research-card:hover {
+    border-color: rgba(150,130,255,0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 45px rgba(124,95,230,0.12);
+  }
+
+  .research-card:hover::after { transform: scaleX(1); }
+
+  .research-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .research-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--accent2);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.6rem;
+  }
+
+  .research-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+    color: var(--text);
+  }
+
+  .research-card p {
+    font-size: 0.87rem;
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  /* Ph.D. thesis section */
+  .thesis-box {
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+
+  .thesis-box::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 4px; height: 100%;
+    background: linear-gradient(180deg, var(--accent2), var(--accent));
+  }
+
+  .thesis-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+
+  .thesis-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 0.8rem;
+  }
+
+  .thesis-box p {
+    font-size: 0.88rem;
+    color: var(--soft);
+    line-height: 1.8;
+    max-width: 720px;
+  }
+
+  .collab-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .collab-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.2rem 1.5rem;
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 2px;
+  }
+
+  .collab-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent2);
+    flex-shrink: 0;
+  }
+
+  .collab-item span {
+    font-size: 0.88rem;
+    color: var(--soft);
+  }
+
+  @media (max-width: 700px) {
+    .research-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="scroll-line" id="scrollLine"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">S<span>G</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#skills">Skills</a></li>
+    <li><a href="index.html#experience">Experience</a></li>
+    <li><a href="research.html" class="active">Research</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-tag">Academic Research</div>
+  <h1>Research <em>Areas</em></h1>
+  <p>My research focuses on intelligent AI systems that understand human behaviour — spanning multimodal AI, cognitive analytics, conversational intelligence, and LLM-powered applications.</p>
+</div>
+
+<section>
+  <div class="section-header">
+    <span class="section-num">01 /</span>
+    <h2>Core <em>Themes</em></h2>
+  </div>
+
+  <div class="research-grid">
+    <div class="research-card">
+      <span class="research-icon">🧠</span>
+      <div class="research-num">01 /</div>
+      <h3>Large Language Models & Generative AI</h3>
+      <p>LLM application design, RAG pipelines, prompt engineering, self-hosted LLM deployment, structured output generation, and production-grade LLM evaluation and monitoring workflows.</p>
+      <div class="tags">
+        <span class="tag">LLMs</span>
+        <span class="tag">RAG</span>
+        <span class="tag">Prompt Engineering</span>
+      </div>
+    </div>
+
+    <div class="research-card">
+      <span class="research-icon">⚙️</span>
+      <div class="research-num">02 /</div>
+      <h3>Agentic AI & Intelligent Orchestration</h3>
+      <p>Designing agentic workflows with tool calling, multi-step reasoning, and intelligent routing. Building autonomous AI systems that plan, act, and adapt in real-time enterprise contexts.</p>
+      <div class="tags">
+        <span class="tag">Agentic AI</span>
+        <span class="tag">Tool Calling</span>
+        <span class="tag">Orchestration</span>
+      </div>
+    </div>
+
+    <div class="research-card">
+      <span class="research-icon">🎭</span>
+      <div class="research-num">03 /</div>
+      <h3>Multimodal AI & Digital Human Systems</h3>
+      <p>Integrating language, vision, and speech for natural human-AI interaction. Building real-time digital human systems that combine visual intelligence with conversational AI.</p>
+      <div class="tags">
+        <span class="tag">Multimodal AI</span>
+        <span class="tag">Digital Humans</span>
+        <span class="tag">Vision-Language</span>
+      </div>
+    </div>
+
+    <div class="research-card">
+      <span class="research-icon">👁️</span>
+      <div class="research-num">04 /</div>
+      <h3>Cognitive Analytics & Engagement Detection</h3>
+      <p>Ph.D. research on AI-driven learner state prediction, facial emotion recognition, and multimodal engagement detection in intelligent e-learning environments using deep learning.</p>
+      <div class="tags">
+        <span class="tag">Cognitive AI</span>
+        <span class="tag">Engagement</span>
+        <span class="tag">Deep Learning</span>
+      </div>
+    </div>
+
+    <div class="research-card">
+      <span class="research-icon">🔮</span>
+      <div class="research-num">05 /</div>
+      <h3>Forecasting & Industrial AI</h3>
+      <p>Applied AI for predictive analytics, EV charging optimization, equipment monitoring, and predictive maintenance in industrial settings using time-series and sensor data.</p>
+      <div class="tags">
+        <span class="tag">Forecasting</span>
+        <span class="tag">Predictive Maintenance</span>
+        <span class="tag">Industrial AI</span>
+      </div>
+    </div>
+
+    <div class="research-card">
+      <span class="research-icon">🌐</span>
+      <div class="research-num">06 /</div>
+      <h3>NLP & Conversational Systems</h3>
+      <p>Applied NLP for language understanding, spelling correction, knowledge-grounded response generation, and building context-aware conversational AI systems at production scale.</p>
+      <div class="tags">
+        <span class="tag">NLP</span>
+        <span class="tag">Conversational AI</span>
+        <span class="tag">Knowledge Graphs</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-header">
+    <span class="section-num">02 /</span>
+    <h2>Doctoral <em>Research</em></h2>
+  </div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">Ph.D. Thesis · Thapar Institute of Engineering and Technology</div>
+    <h3>AI-Driven Smart Learning Systems: Cognitive Analytics, Engagement Detection & Multimodal Behaviour Analysis</h3>
+    <p>Doctoral research focused on developing machine learning and deep learning models that use multimodal inputs — facial expressions, body language, physiological signals — to predict learner cognitive states and personalise the e-learning experience. Built analytical workflows and dashboards transforming behavioural signals into actionable educational insights.</p>
+    <div class="tags" style="margin-top:1.2rem;">
+      <span class="tag">Smart E-Learning</span>
+      <span class="tag">Cognitive Computing</span>
+      <span class="tag">Affective Computing</span>
+      <span class="tag">Multimodal Behaviour</span>
+      <span class="tag">Deep Learning</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Dr. Swadha Gupta · All Rights Reserved &nbsp;·&nbsp;
+  <a href="publications.html">Publications</a> &nbsp;·&nbsp;
+  <a href="index.html">Home</a>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

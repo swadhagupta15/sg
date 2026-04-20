@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Dr. Swadha Gupta</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    text-decoration: none;
+    color: var(--soft);
+    background: var(--card);
+    transition: all 0.25s;
+  }
+
+  .contact-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateX(5px);
+    box-shadow: 0 6px 25px rgba(124,95,230,0.12);
+  }
+
+  .contact-link .cl-icon {
+    font-size: 1.2rem;
+    width: 2rem;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .contact-link .cl-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-link .cl-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+  }
+
+  .contact-link .cl-value {
+    font-size: 0.88rem;
+  }
+
+  /* Form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 0.9rem 1.2rem;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    transition: border-color 0.2s;
+    outline: none;
+    -webkit-appearance: none;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--accent2);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 130px; }
+
+  .form-group select option { background: var(--bg2); }
+
+  .form-note {
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.6;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    background: var(--card);
+  }
+
+  #formStatus {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    padding: 0.8rem 1.2rem;
+    border-radius: 2px;
+    display: none;
+  }
+
+  #formStatus.success {
+    background: rgba(124,95,230,0.1);
+    border: 1px solid rgba(124,95,230,0.3);
+    color: var(--accent);
+    display: block;
+  }
+
+  @media (max-width: 800px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="scroll-line" id="scrollLine"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">S<span>G</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#skills">Skills</a></li>
+    <li><a href="index.html#experience">Experience</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-tag">Get in Touch</div>
+  <h1>Let's <em>Connect</em></h1>
+  <p>Open to collaborations, research opportunities, AI consulting, and interesting conversations about LLMs, agentic AI, and multimodal systems.</p>
+</div>
+
+<section>
+  <div class="contact-grid">
+
+    <!-- LEFT: Direct links -->
+    <div>
+      <div class="section-header" style="margin-bottom:1.5rem;">
+        <span class="section-num">01 /</span>
+        <h2>Direct <em>Links</em></h2>
+      </div>
+
+      <div class="contact-links">
+        <a href="mailto:swadhagupta15@gmail.com" class="contact-link">
+          <span class="cl-icon">✉</span>
+          <div class="cl-body">
+            <span class="cl-label">Email</span>
+            <span class="cl-value">swadhagupta15@gmail.com</span>
+          </div>
+        </a>
+        <a href="tel:+4915111006320" class="contact-link">
+          <span class="cl-icon">☏</span>
+          <div class="cl-body">
+            <span class="cl-label">Phone</span>
+            <span class="cl-value">+49 151 11006320</span>
+          </div>
+        </a>
+        <a href="https://github.com/swadhagupta15" target="_blank" class="contact-link">
+          <span class="cl-icon">◈</span>
+          <div class="cl-body">
+            <span class="cl-label">GitHub</span>
+            <span class="cl-value">github.com/swadhagupta15</span>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/swadha-gupta" target="_blank" class="contact-link">
+          <span class="cl-icon">↗</span>
+          <div class="cl-body">
+            <span class="cl-label">LinkedIn</span>
+            <span class="cl-value">linkedin.com/in/swadha-gupta</span>
+          </div>
+        </a>
+        <a href="https://scholar.google.com/citations?user=swadhagupta" target="_blank" class="contact-link">
+          <span class="cl-icon">∑</span>
+          <div class="cl-body">
+            <span class="cl-label">Google Scholar</span>
+            <span class="cl-value">400+ citations · 3 publications</span>
+          </div>
+        </a>
+        <a href="assets/files/Swadha_CV_2026.pdf" download class="contact-link">
+          <span class="cl-icon">⬇</span>
+          <div class="cl-body">
+            <span class="cl-label">Curriculum Vitae</span>
+            <span class="cl-value">Download PDF</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="form-note">
+        📍 Based in <strong>Augsburg, Bavaria, Germany</strong><br>
+        EU Blue Card holder — available for roles across Germany and Europe.
+      </div>
+    </div>
+
+    <!-- RIGHT: Message form -->
+    <div>
+      <div class="section-header" style="margin-bottom:1.5rem;">
+        <span class="section-num">02 /</span>
+        <h2>Send a <em>Message</em></h2>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="Jane Smith" required>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="jane@example.com" required>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <select>
+            <option value="">Select a topic...</option>
+            <option>Collaboration / Research</option>
+            <option>Job Opportunity</option>
+            <option>AI Consulting</option>
+            <option>Speaking / Talks</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Hi Dr. Gupta, I'd love to discuss..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:fit-content;">Send Message →</button>
+        <div id="formStatus"></div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Dr. Swadha Gupta · All Rights Reserved &nbsp;·&nbsp;
+  <a href="index.html">Home</a>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const status = document.getElementById('formStatus');
+    status.className = 'success';
+    status.textContent = '✓ Message noted — please email directly at swadhagupta15@gmail.com';
+  });
+</script>
+</body>
+</html>
